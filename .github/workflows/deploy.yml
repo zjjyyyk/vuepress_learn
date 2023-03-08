@@ -1,39 +1,18 @@
-name: Deploy Docs
-
-on:
-  push:
-    branches:
-      - main # replace with the branch you want to build and deploy
-permissions:
-  contents: write
-
+name: Build and Deploy
+on: [push]
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-      
-    - name: Install Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18.14.2'
-    
-    - name: Install yarn
-      run: npm install -g yarn@1.22.5
+    - name: Checkout
+      uses: actions/checkout@master
 
-    - name: Install Vuepress
-      run: yarn global add vuepress
-        
-    - name: Install Dependencies
-      run: yarn install
-
-    - name: Build
-      run: export NODE_OPTIONS=--openssl-legacy-provider;yarn docs:build
-      
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: gh-pages # The branch the action should deploy to
-        folder: docs/.vuepress/dist # The folder the action should deploy.
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        TARGET_REPO: zjjyyyk/vuepress_learn
+        TARGET_BRANCH: master
+        BUILD_SCRIPT: yarn && export NODE_OPTIONS=--openssl-legacy-provider && yarn docs:build
+        BUILD_DIR: docs/.vuepress/dist
+        # CNAME: https://www.xxx.com
