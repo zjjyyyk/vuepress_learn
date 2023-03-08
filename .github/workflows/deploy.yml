@@ -1,0 +1,35 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main # replace with the branch you want to build and deploy
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Install Node.js and Yarn
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.14.2'
+        cache: 'yarn'
+        registry-url: 'https://registry.npm.taobao.org'
+      run: |
+        npm install -g yarn
+        
+    - name: Install Dependencies
+      run: yarn install
+      
+    - name: Build
+      run: yarn build
+      
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages # The branch the action should deploy to.
+        folder: .vuepress/dist # The folder the action should deploy.
