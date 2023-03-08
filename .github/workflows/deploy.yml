@@ -20,6 +20,9 @@ jobs:
     
     - name: Install yarn
       run: npm install -g yarn@1.22.5
+
+    - name: Install Vuepress
+      run: yarn global add vuepress
         
     - name: Install Dependencies
       run: yarn install
