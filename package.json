@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress --openssl-legacy-provider build docs "
+    "docs:build": "vuepress build docs "
   },
   "keywords": [],
   "author": "zjjyyyk <791549989@qq.com>",

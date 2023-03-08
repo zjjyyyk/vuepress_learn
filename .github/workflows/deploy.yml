@@ -28,7 +28,7 @@ jobs:
       run: yarn install
 
     - name: Build
-      run: yarn docs:build
+      run: export NODE_OPTIONS=--openssl-legacy-provider;yarn docs:build
       
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.4
