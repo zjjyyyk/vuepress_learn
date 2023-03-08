@@ -1,5 +1,6 @@
 module.exports = {
   title: 'zjjyyyk的笔记',
+  base : '/vuepress_learn/',
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
