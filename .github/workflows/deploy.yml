@@ -20,9 +20,6 @@ jobs:
     
     - name: Install yarn
       run: npm install -g yarn@1.22.5
-      with:
-        registry-url: 'https://registry.npm.taobao.org'
-
         
     - name: Install Dependencies
       run: yarn install
