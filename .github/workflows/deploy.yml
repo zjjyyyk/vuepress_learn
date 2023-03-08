@@ -26,7 +26,10 @@ jobs:
         
     - name: Install Dependencies
       run: yarn install
-      
+
+    - name: set NodeOptions
+      run: export NODE_OPTIONS=--openssl-legacy-provider
+
     - name: Build
       run: yarn docs:build
       
