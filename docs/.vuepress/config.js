@@ -13,22 +13,21 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: 'Vuepress手册', link: '/use-vuepress/' },
-      { text: '对话Chatgpt', link: '/chatgpt/' },
+      { text: '电阻距离', link: '/ResistanceDistance/' },
     ],
     sidebar: {
       '/use-vuepress/': [
         '',
         'add-blog'
       ],
-      '/chatgpt/': [
+      '/ResistanceDistance/': [
         '',
-        'art1',
-        'art2',
+        'basic',
       ],
       '/': [
         '',
         'use-vuepress/',
-        'chatgpt/'
+        'ResistanceDistance/'
       ]
     },
   }
