@@ -23,11 +23,12 @@ module.exports = {
       '/ResistanceDistance/': [
         '',
         'basic',
+        'interpretation',
       ],
       '/': [
         '',
         'use-vuepress/',
-        'ResistanceDistance/'
+        'ResistanceDistance/',
       ]
     },
   }
