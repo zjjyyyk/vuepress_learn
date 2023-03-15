@@ -18,7 +18,8 @@ module.exports = {
     sidebar: {
       '/techniques/': [
         '',
-        'add-blog'
+        'add-blog',
+        'chatgpt'
       ],
       '/ResistanceDistance/': [
         '',
