@@ -16,7 +16,7 @@ module.exports = {
       { text: '电阻距离', link: '/ResistanceDistance/' },
     ],
     sidebar: {
-      '/tehniques/': [
+      '/techniques/': [
         '',
         'add-blog'
       ],
