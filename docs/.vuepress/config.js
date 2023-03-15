@@ -12,11 +12,11 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: 'Vuepress手册', link: '/use-vuepress/' },
+      { text: '技术工具', link: '/techniques/' },
       { text: '电阻距离', link: '/ResistanceDistance/' },
     ],
     sidebar: {
-      '/use-vuepress/': [
+      '/tehniques/': [
         '',
         'add-blog'
       ],
@@ -27,7 +27,7 @@ module.exports = {
       ],
       '/': [
         '',
-        'use-vuepress/',
+        'techniques/',
         'ResistanceDistance/',
       ]
     },
