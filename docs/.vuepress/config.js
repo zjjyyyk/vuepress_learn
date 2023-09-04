@@ -14,6 +14,7 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '技术工具', link: '/techniques/' },
       { text: '电阻距离', link: '/ResistanceDistance/' },
+      { text: '日记', link: '/diary/'}
     ],
     sidebar: {
       '/techniques/': [
@@ -26,10 +27,16 @@ module.exports = {
         'basic',
         'interpretation',
       ],
+      '/diary/' : [
+        '',
+        'everydayLearning',
+        'weeklyStudyReport',
+      ],
       '/': [
         '',
         'techniques/',
         'ResistanceDistance/',
+        'dairy/',
       ]
     },
   }
